@@ -84,12 +84,21 @@ class MyWidget(QMainWindow, Ui_MainWindow):
                 match event.key():
                     case Qt.Key.Key_Up:
                         self.camera[0] += k * self.spn
+                        if self.camera[0] >= 85:
+                            self.camera[0] = -85 + (self.camera[0] - 85)
                     case Qt.Key.Key_Down:
                         self.camera[0] -= k * self.spn
+                        if self.camera[0] <= -85:
+                            self.camera[0] = 170 + self.camera[0]
                     case Qt.Key.Key_Left:
-                        self.camera[1] -= k * self.spn
+                        self.camera[1] -= 2 * k * self.spn
+                        if self.camera[1] <= -180:
+                            self.camera[1] = 360 + self.camera[1]
                     case Qt.Key.Key_Right:
-                        self.camera[1] += k * self.spn
+                        self.camera[1] += 2 * k * self.spn
+                        if self.camera[1] >= 180:
+                            self.camera[1] = -180 + (self.camera[1] - 180)
+                print(self.camera)
                 self.show_map()
                 print(1)
 
