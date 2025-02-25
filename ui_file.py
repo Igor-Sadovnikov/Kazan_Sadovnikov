@@ -1,3 +1,4 @@
+
 import sys
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6.QtWidgets import QApplication, QMainWindow
@@ -95,7 +96,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Maps API. Часть №3"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Maps API. Часть №4"))
         self.darkThemeButton.setText(_translate("MainWindow", "Темная"))
         self.lightThemeButton.setText(_translate("MainWindow", "Светлая"))
         self.mapTypeComboBox.setItemText(0, _translate("MainWindow", "Базовая карта"))
